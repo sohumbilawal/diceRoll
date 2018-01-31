@@ -1,5 +1,4 @@
 from random import *
-import heapq
 
 d1 = 0
 d2 = 0
@@ -18,8 +17,7 @@ def diceRoll(num):
         die = randint(1,6)
         aDice.extend([die])
         i += 1
-    #aDice.extend([max(aDice)])
-    return aDice
+    return aDice, max(aDice)
 
 #aDice = [d1, d2, d3]
 
@@ -40,12 +38,7 @@ elif numADice == 2:
 elif numADice == 1:
     print("Rolling 1 die: ", diceRoll(1))
 
-#aHeap = heapq.heapify(aDice)
-highA = heapq.nlargest(2, aDice[0:len(aDice)])
-maxA = highA[0]
-max2A = highA[1]
-print("The highest attacker roll is: {0}, and second highest is: {1}".format(maxA, max2A))
-#print(aDice)
+print(aDice)
 
 #print(aDice)
 #print(d1, d2, d3)
