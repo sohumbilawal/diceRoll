@@ -211,7 +211,7 @@ while aTroops >= 0 or dTroops >= 0:
         break
 
     time.sleep(delay)
-    
+
 if aTroops > dTroops:
     print("Attacking army wins! Troops left: {0}".format(aTroops))
 elif dTroops > aTroops:
